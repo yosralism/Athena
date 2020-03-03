@@ -1,0 +1,61 @@
+<launch>
+    <node name="fm_changer" pkg="athena" type="fm_changer" output="screen"/>
+    
+    <node name="main" pkg="athena" type="main" output="screen">
+        <param name="waypoint_1" value="2" />
+        <param name="waypoint_2" value="3" />
+        <param name="waypoint_3" value="4" />
+        <param name="waypoint_4" value="5" />
+	<param name="waypoint_5" value="6" />
+        <param name="waypoint_6" value="7" />
+        <param name="waypoint_7" value="8" />
+
+    </node>
+
+    <node name="mission_control" pkg="athena" type="mission_control" output="screen">
+        <param name="mission_time" value="20" />
+        <param name="desired_alt_down" value="200" />
+        <param name="desired_alt_up" value="400" />
+    </node>
+
+
+    <node name="pid_x" pkg="pid" type="controller" ns="pid_x" output="screen">
+        <param name="Kp" value="5.0" />
+        <param name="Ki" value="0.0" />
+        <param name="Kd" value="0.1" />
+        <param name="upper_limit" value="10" />
+        <param name="lower_limit" value="-10" />
+        <param name="windup_limit" value="10" />
+        <param name="max_loop_frequency" value="100.0" />
+        <param name="min_loop_frequency" value="100.0" />
+    </node>
+
+    <node name="pid_y" pkg="pid" type="controller" ns="pid_y" output="screen">
+        <param name="Kp" value="5.0" />
+        <param name="Ki" value="0.0" />
+        <param name="Kd" value="0.1" />
+        <param name="upper_limit" value="10" />
+        <param name="lower_limit" value="-10" />
+        <param name="windup_limit" value="10" />
+        <param name="max_loop_frequency" value="100.0" />
+        <param name="min_loop_frequency" value="100.0" />
+    </node>
+
+    <node name="pid_z" pkg="pid" type="controller" ns="pid_z" output="screen">
+        <param name="Kp" value="5.0" />
+        <param name="Ki" value="0.0" />
+        <param name="Kd" value="0.1" />
+        <param name="upper_limit" value="10" />
+        <param name="lower_limit" value="-10" />
+        <param name="windup_limit" value="10" />
+        <param name="max_loop_frequency" value="100.0" />
+        <param name="min_loop_frequency" value="100.0" />
+    </node>
+
+    <node pkg="rosserial_python" type="serial_node.py" name="serial_node" output="screen">
+    	<param name="port" value="/dev/ttyUSB0"/>
+    	<param name="baud" value="57600"/>
+    </node>
+
+
+</launch>

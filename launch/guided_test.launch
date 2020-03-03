@@ -1,0 +1,57 @@
+<launch>
+    
+    <arg name="--picamera" default="-1" />
+   
+    <node name="fm_changer_test" pkg="athena" type="fm_changer_test" output="screen"/>
+    
+
+    <node name="pid_x" pkg="pid" type="controller" ns="pid_x" output="screen">
+        <param name="Kp" value="0.002" />
+        <param name="Ki" value="0.0" />
+        <param name="Kd" value="0.0" />
+        <param name="upper_limit" value="10" />
+        <param name="lower_limit" value="-10" />
+        <param name="windup_limit" value="10" />
+        <param name="max_loop_frequency" value="100.0" />
+        <param name="min_loop_frequency" value="100.0" />
+    </node>
+
+    <node name="pid_y" pkg="pid" type="controller" ns="pid_y" output="screen">
+        <param name="Kp" value="0.002" />
+        <param name="Ki" value="0.00" />
+        <param name="Kd" value="0.00" />
+        <param name="upper_limit" value="10" />
+        <param name="lower_limit" value="-10" />
+        <param name="windup_limit" value="10" />
+        <param name="max_loop_frequency" value="100.0" />
+        <param name="min_loop_frequency" value="100.0" />
+    </node>
+
+    <node name="pid_z" pkg="pid" type="controller" ns="pid_z" output="screen">
+        <param name="Kp" value="0.002" />
+        <param name="Ki" value="0.00" />
+        <param name="Kd" value="0.00" />
+        <param name="upper_limit" value="10" />
+        <param name="lower_limit" value="-10" />
+        <param name="windup_limit" value="10" />
+        <param name="max_loop_frequency" value="100.0" />
+        <param name="min_loop_frequency" value="100.0" />
+    </node>
+
+    <node name="test_guided" pkg="athena" type="test_guided" output="screen" >
+	    <param name="mission_time" value="20" />
+	    <param name="desired_alt_down" value="200" />
+	    <param name="desired_alt_up" value="400" />
+    </node>
+   
+    <node name="vision_pub" pkg="athena" type="vision_pub.py" output="screen" />
+
+
+    <node pkg="rosserial_python" type="serial_node.py" name="serial_node" output="screen">
+        <param name="port" value="/dev/ttyUSB0" />
+        <param name="baud" value="57600" />
+    </node>
+
+
+
+</launch>

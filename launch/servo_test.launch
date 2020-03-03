@@ -1,0 +1,9 @@
+<launch>
+    <node name="test_servo2" pkg="athena" type="test_servo2" output="screen" />
+
+    <node pkg="rosserial_python" type="serial_node.py" name="rosserial" output="screen">
+        <param name="port" value="/dev/ttyUSB0" />
+        <param name="baud" value="57600" />
+    </node>
+
+</launch>
