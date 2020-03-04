@@ -4,7 +4,7 @@
    
     <node name="fm_changer_test" pkg="athena" type="fm_changer_test" output="screen"/>
     
-    <node name="main" pkg="krti19" type="main" output="screen">
+    <node name="main" pkg="athena" type="main" output="screen">
         <param name="waypoint_1" value="3" />
         <param name="waypoint_2" value="5" />
         <param name="waypoint_3" value="7" />
