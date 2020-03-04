@@ -30,7 +30,7 @@ catkin build
 ```
 ## Running the tests 
 
-Connect your ground station (laptop) to the vehicle's onboard PC with router via ssh
+Connect your ground station (laptop) to the vehicle's onboard PC with WiFi router via ssh
 ```
 ssh device_name@ip_address
 ```
