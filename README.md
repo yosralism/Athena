@@ -48,7 +48,7 @@ roslaunch mavros apm.launch
 Open new terminal
 
 ```
-roslaunch athea athena_guided.launch
+roslaunch athena athena_guided.launch
 ```
 
 Important to check:
