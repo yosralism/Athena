@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software
+What things you need to install on the vehicle's onboard PC
 
 * Ubuntu 18.04
 * [OpenCV 3](https://docs.opencv.org/3.4/d2/de6/tutorial_py_setup_in_ubuntu.html) - Library for computer vision
@@ -30,7 +30,7 @@ catkin build
 ```
 ## Running the tests 
 
-Connect your ground station (laptop) to the vehicle's onboard pc with router via ssh
+Connect your ground station (laptop) to the vehicle's onboard PC with router via ssh
 ```
 ssh device_name@ip_address
 ```
