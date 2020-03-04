@@ -17,6 +17,7 @@ What things you need to install the software
 * [Imutils Package](https://pypi.org/project/imutils/) - Enhance CV performance 
 * [ROS PID Package](http://wiki.ros.org/pid) - Plug and Play PID Package for ROS
 * [Arduino IDE](https://ubuntu.com/tutorials/install-the-arduino-ide#1-overview) - Used for payloads dropping mechanism
+* [Rosserial Arduino](http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup) Package for communication between ROS and Arduino
 
 ### How To Build
 
