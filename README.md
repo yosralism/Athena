@@ -23,13 +23,8 @@ What things you need to install the software
 Go to your catkin_workspace/your_src folder
 ```
 git clone https://github.com/yosralism/athena.git
-```
-```
 cd athena
-```
-```
 source devel/setup.bash
-```
-```
 catkin build
 ```
+
