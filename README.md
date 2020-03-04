@@ -27,4 +27,36 @@ cd athena
 source devel/setup.bash
 catkin build
 ```
+## Running the tests 
+
+Connect your ground station (laptop) to the vehicle's onboard pc with router via ssh
+```
+ssh device_name@ip_address
+```
+example
+```
+ssh odroid@192.168.1.105
+```
+### Checking up servo mechanism
+```
+roslaunch athena servo_test.launch
+```
+### Run the full mission test
+```
+roslaunch mavros apm.launch
+```
+Open new terminal
+
+```
+roslaunch mavros apm.launch
+```
+
+Important to check:
+* Flight mode 
+* Waypoint reach
+
+For checking target detection value, open new terminal
+```
+rostopic echo /cv_target
+```
 
