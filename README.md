@@ -16,7 +16,7 @@ What things you need to install the software
 * [Mavros](https://dev.px4.io/v1.9.0/en/ros/mavros_installation.html) - The mavros ROS package enables MAVLink extendable     communication
 * [Imutils Package](https://pypi.org/project/imutils/) - Enhance CV performance 
 * [ROS PID Package](http://wiki.ros.org/pid) - Plug and Play PID Package for ROS
-* [Arduino IDE](https://ubuntu.com/tutorials/install-the-arduino-ide#1-overview) - Program for payloads dropping mechanism
+* [Arduino IDE](https://ubuntu.com/tutorials/install-the-arduino-ide#1-overview) - Used for payloads dropping mechanism
 
 ### How To Build
 
