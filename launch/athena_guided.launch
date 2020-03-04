@@ -2,7 +2,7 @@
     
     <arg name="--picamera" default="-1" />
    
-    <node name="fm_changer" pkg="athena" type="fm_changer" output="screen"/>
+    <node name="fm_changer_test" pkg="athena" type="fm_changer_test" output="screen"/>
     
     <node name="main" pkg="krti19" type="main" output="screen">
         <param name="waypoint_1" value="3" />
